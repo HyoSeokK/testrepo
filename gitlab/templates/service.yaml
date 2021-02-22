@@ -5,7 +5,7 @@ metadata:
  labels:
   app: gitlab
 spec:
- type: {{ .Values.service.type }}
+ type: NodePort
  ports:
  - name: web
    targetPort: {{ .Values.service.ports.web }}
