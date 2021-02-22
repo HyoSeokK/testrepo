@@ -11,7 +11,7 @@ spec:
    targetPort: {{ .Values.service.ports.web }}
    port: {{ .Values.service.ports.web }}
  - name: ssh
-   tartgetPort: {{ .Values.service.ports.ssh }}
+   targetPort: {{ .Values.service.ports.ssh }}
    port: {{ .Values.service.ports.ssh }}
  - name: ssl
    targetPort: {{ .Values.service.ports.ssl }}
