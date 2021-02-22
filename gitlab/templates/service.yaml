@@ -3,7 +3,7 @@ kind: Service
 metadata:
  name: "svc-{{.Chart.Name}}"
  labels:
-  app: gitlab
+  app: gitlabhelm
 spec:
  type: NodePort
  ports:
