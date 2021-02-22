@@ -1,7 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: "{{.values.pv.name}}-config"
+  name: "{{.values.pv.name }}-config"
   labels:
     type: local
 spec:
@@ -11,4 +11,4 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: {{.values.pv.config}}
+    path: {{ .values.pv.config }}
