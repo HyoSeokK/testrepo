@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
  name: "dp-{{ .Chart.Name }}"
  labels:
-  app: dp-gitlab
+  app: gitlabhelm
 spec:
  selector:
   matchLabels:
