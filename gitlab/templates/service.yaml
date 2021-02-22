@@ -17,5 +17,5 @@ spec:
    targetPort: {{ .Values.service.ports.ssl }}
    port: {{ .Values.service.ports.ssl }}
  selector:
-  app: gitlab
+  app: gitlabhelm
   
