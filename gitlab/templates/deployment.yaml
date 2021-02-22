@@ -41,9 +41,9 @@ spec:
      persistentVolumeClaim:
       claimName: "{{ .Values.pv.name }}-pvc-config"
    - name: data
-     persistantVolumeClaim:
+     persistentVolumeClaim:
       claimName: "{{ .Values.pv.name }}-pvc-data"
    - name: logs
-     persistantVolumeClaim:
+     persistentVolumeClaim:
       claimName: "{{ .Values.pv.name }}-pvc-logs"
    
