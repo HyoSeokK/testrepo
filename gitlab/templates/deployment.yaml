@@ -39,11 +39,11 @@ spec:
    volumes:
    - name: config
      persistentVolumeClaim:
-      claimName: "{{ .values.pv.name }}-pvc-config"
+      claimName: "{{ .Values.pv.name }}-pvc-config"
    - name: data
      persistantVolumeClaim:
-      claimName: "{{ .values.pv.name }}-pvc-data"
+      claimName: "{{ .Values.pv.name }}-pvc-data"
    - name: logs
      persistantVolumeClaim:
-      claimName: "{{ .values.pv.name }}-pvc-logs"
+      claimName: "{{ .Values.pv.name }}-pvc-logs"
    
