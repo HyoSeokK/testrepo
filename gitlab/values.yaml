@@ -2,6 +2,7 @@ service:
  name: gitlabsvc
  type: LoadBalancer
 pv:
+ name: gitlabhelm
  log: /svc/gitlab/logs 
  config: /svc/gitlab/config
  data: /svc/gitlab/data
