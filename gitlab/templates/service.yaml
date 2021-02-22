@@ -5,14 +5,14 @@ metadata:
  labels:
   app: gitlab
 spec:
- type: {{ .values.service.type }}
+ type: {{ .Values.service.type }}
  ports:
  - name: web
-   targetPort: {{ .values.service.ports.web }}
-   port: {{ .values.service.ports.web }}
+   targetPort: {{ .Values.service.ports.web }}
+   port: {{ .Values.service.ports.web }}
  - name: ssh
-   tartgetPort: {{ .values.service.ports.ssh }}
-   port: {{ .values.service.ports.ssh }}
+   tartgetPort: {{ .Values.service.ports.ssh }}
+   port: {{ .Values.service.ports.ssh }}
  - name: ssl
-   targetPort: {{ .values.service.ports.ssl }}
-   port: {{ .values.service.ports.ssl }}
+   targetPort: {{ .Values.service.ports.ssl }}
+   port: {{ .Values.service.ports.ssl }}
