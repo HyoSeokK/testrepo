@@ -16,3 +16,6 @@ spec:
  - name: ssl
    targetPort: {{ .Values.service.ports.ssl }}
    port: {{ .Values.service.ports.ssl }}
+ selector:
+  app: gitlab
+  
