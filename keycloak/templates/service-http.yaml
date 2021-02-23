@@ -15,7 +15,7 @@ metadata:
     {{- end }}
     app.kubernetes.io/component: http
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   {{- if and (eq "LoadBalancer" .Values.service.type) .Values.service.loadBalancerIP }}
   loadBalancerIP: {{ .Values.service.loadBalancerIP }}
   {{- end }}
