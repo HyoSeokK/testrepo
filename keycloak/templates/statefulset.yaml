@@ -82,6 +82,10 @@ spec:
           {{- tpl . $ | nindent 12 }}
           {{- end }}
           env:
+            - name: KEYCLOAK_USER
+              value: admin
+            - name: KEYCLOAK_PASSWORD
+              value: admin
             {{- if .Values.postgresql.enabled }}
             - name: DB_VENDOR
               value: postgres
