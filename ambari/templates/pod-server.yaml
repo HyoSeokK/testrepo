@@ -11,7 +11,7 @@ spec:
   setHostnameAsFQDN: true
   containers:
   - image: docker.jointree.co.kr/jointree/joinambari:v2.0
-    name: ambariserver
+    name: nn1
     command: ["/bin/bash","-c","mkdir /csv"]
     env:
     - name: JAVA_HOME
@@ -24,7 +24,7 @@ spec:
         mountPath: /csv
     securityContext:
      privileged: true
-    port:
+    ports:
     - name: sshd
       containerPort: 22
     - name: ambariport
