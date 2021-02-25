@@ -26,7 +26,7 @@ spec:
       protocol: TCP
       port: 8440
       targetPort: 8440
-    - name: port3
+    - name: port4
       protocol: TCP
       port: 8888
       targetPort: 8888 
