@@ -1,0 +1,15 @@
+hostset:
+ nhost: nn1
+ nnhost: nn2
+service:
+ name: gitlabsvc
+ type: LoadBalancer
+ ports:
+  web: 80
+  ssh: 22
+  ssl: 443
+pv:
+ name: gitlabhelm
+ log: /svc/gitlab/logs 
+ config: /svc/gitlab/config
+ data: /svc/gitlab/data

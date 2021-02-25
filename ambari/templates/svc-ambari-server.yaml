@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-ambari
+  labels:
+    test: ambari
+spec:
+  ports:
+    - name: ssh
+      protocol: TCP
+      port: 22
+      targetPort: 22
+    - name: service
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - name: port1
+      protocol: TCP
+      port: 8187
+      targetPort: 8187
+    - name: port2
+      protocol: TCP
+      port: 8441
+      targetPort: 8441
+    - name: port3
+      protocol: TCP
+      port: 8440
+      targetPort: 8440
+    - name: port3
+      protocol: TCP
+      port: 8888
+      targetPort: 8888 
+  selector:
+    test: ambari
+  type: NodePort

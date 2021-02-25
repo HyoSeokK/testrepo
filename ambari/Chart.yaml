@@ -1,0 +1,5 @@
+apiversion: v1
+description: AmbariDescription
+name: ambarisystem
+type: application
+version: 1.0.0

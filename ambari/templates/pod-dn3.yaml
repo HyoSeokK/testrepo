@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ambariserver
+  labels:
+    tests: jts
+spec:
+  hostname: dn3
+  subdomain: jts2
+  setHostnameAsFQDN: true
+  command: ["/bin/bash","-c","mkdir /csv"]
+  env:
+  - name: JAVA_HOME
+    value: "/usr/lib/jvm/java-1.8.0-openjdk/"
+  containers:
+  - image: docker.jointree.co.kr/jointree/joinagent:v2.0
+    name: ambariserver
+    envFrom:
+     - configMapRef:
+        name: server-cfg
+    volumeMounts:
+      - name: csv-conn
+        mountPath: /csv
+    securityContext:
+     privileged: true
+    port:
+    - name: sshd
+      containerPort: 22
+    - name: ambariport
+      containerPort: 8080
+  - image: postgres:12
+    name: post
+    envFrom:
+     - configMapRef:
+        name: ampost
+    ports:
+    - containerPort: 5432
+      name: postdb
+  restartPolicy: Always
+  imagePullSecrets:
+   - name: docker-registry-login
+  nodeSelector:
+   kubernetes.io/hostname: 104
+  volumes:
+    - name: csv-conn
+      persistentVolumeClaim:
+        claimName: csvconn
