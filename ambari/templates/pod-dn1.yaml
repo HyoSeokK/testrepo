@@ -5,7 +5,7 @@ metadata:
   labels:
     tests: jts
 spec:
-  hostname: dn1
+  hostname: join-dn1
   subdomain: jts2
   setHostnameAsFQDN: true
   containers:

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: dn3
+  name: join-dn3
   labels:
     tests: jts
 spec:

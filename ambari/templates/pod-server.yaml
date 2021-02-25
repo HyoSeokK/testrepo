@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nn1
+  name: join-nn1
   labels:
     test: ambari
     tests: jts
