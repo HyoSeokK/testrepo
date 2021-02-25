@@ -31,7 +31,7 @@ spec:
   imagePullSecrets:
    - name: docker-registry-login
   nodeSelector:
-   kubernetes.io/hostname: 104
+   kubernetes.io/hostname: "104"
   volumes:
     - name: csv-conn
       persistentVolumeClaim:
