@@ -6,9 +6,6 @@ metadata:
     test: ambari
     tests: jts
 spec:
-  hostname: nn1
-  subdomain: jts2
-  setHostnameAsFQDN: true
   containers:
   - image: docker.jointree.co.kr/jointree/joinhue:v1.0
     name: hue
