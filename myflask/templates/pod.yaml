@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: testflsk
-      image: docker.jointree.co.kr/jointree/jointestflask
+      image: docker.jointree.co.kr/jointree/jointestflask:v{{Chart.version}}
       ports:
         - containerPort: 80
           protocol: TCP
